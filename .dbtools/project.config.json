@@ -5,7 +5,7 @@
     "autoConnect" : false,
     "version" : "25.4.2.0"
   },
-  "schemas" : [ "DEV_SCHEMA_V2" ],
+  "schemas" : [ "DEV_SCHEMA_V2", "WKSP_ELWAGHA50" ],
   "lastReleaseVersion" : "1.0",
   "export" : {
     "format" : {
