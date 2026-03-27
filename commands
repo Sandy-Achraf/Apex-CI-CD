@@ -1,0 +1,478 @@
+Step 1: Initializing Git
+We’ll be running our command from SQLcl, and we’re going to be doing that as the application schema owner. If your project has more than one schema, just use an account with privs to cover all of those schemas.
+
+We are going to connect to the db as our user (DEV_USER), and run the git command, via the host (!) option in SQLcl.
+
+SQL> !git init --initial-branch main
+Initialized empty Git repository in /home/assets/assets/workshops/sqlcl-projects-react-app/.git/
+Next we’ll do a commit, making sure we’re in the root of our application directory. This will put our React app and it’s files as well as our database objects into our Git repo.
+
+SQL> !git commit -m "Initial commit"
+[main (root-commit) 6bee390] Initial commit
+ 57 files changed, 11189 insertions(+)
+ create mode 100755 .env.example
+ create mode 100755 .eslintrc.cjs
+ create mode 100755 .gitignore
+ create mode 100755 CONTRIBUTING.md
+ create mode 100755 README.md
+ create mode 100755 index.html
+ create mode 100755 package-lock.json
+ create mode 100755 package.json
+ create mode 100755 public/assets/ORCL.svg
+ create mode 100755 public/assets/Q.svg
+ create mode 100755 public/assets/RMIL_Buildings_Medium-Business_Air_RGB.png
+ create mode 100755 public/assets/RMIL_Personas_Student-Demographics-M_Air_RGB.png
+ create mode 100755 public/assets/RMIL_Personas_Workforce-2_Air_RGB.png
+ create mode 100755 public/assets/RMIL_Technology_Database_Air_RGB.png
+ create mode 100755 public/assets/RMIL_Technology_Oracle-Storage-Technology-M_Air_RGB.png
+ create mode 100755 public/assets/logo-blue.png
+ create mode 100755 public/assets/oracle-icon (2).svg
+ create mode 100755 public/assets/react.svg
+ create mode 100755 public/vite.svg
+ create mode 100755 scripts/attendance_table.sql
+ create mode 100755 scripts/departments_table.sql
+ create mode 100755 scripts/employees_table.sql
+ create mode 100755 scripts/performancereviews_table.sql
+ create mode 100755 server/index.cjs
+ create mode 100755 server/routes/connection.cjs
+ create mode 100755 server/utils/db/config.cjs
+ create mode 100755 server/utils/db/index.cjs
+ create mode 100755 server/utils/db/wallet/file.txt
+ create mode 100755 server/utils/rest-services/connection.cjs
+ create mode 100755 src/App.css
+ create mode 100755 src/App.jsx
+ create mode 100755 src/README.md
+ create mode 100755 src/componenets/charts/AttendanceChart.jsx
+ create mode 100755 src/componenets/charts/EmployeesPerDepartmentChart.jsx
+ create mode 100755 src/componenets/charts/PerformanceReview.jsx
+ create mode 100755 src/componenets/common/CostmButton.tsx
+ create mode 100755 src/componenets/common/DepartementCards.tsx
+ create mode 100755 src/componenets/common/DescriptionInfoAlert.tsx
+ create mode 100755 src/componenets/common/ErrorPopup.tsx
+ create mode 100755 src/componenets/common/PageContainerBasic.tsx
+ create mode 100755 src/componenets/common/PlaceHolder.tsx
+ create mode 100755 src/componenets/common/styleGrid.tsx
+ create mode 100755 src/componenets/features/DeleteForm.tsx
+ create mode 100755 src/componenets/features/EmployeeForm.tsx
+ create mode 100755 src/componenets/features/UpdateForm.tsx
+ create mode 100755 src/componenets/navigation/NavigationConfig.tsx
+ create mode 100755 src/componenets/pages/AnalyticsPage.tsx
+ create mode 100755 src/componenets/pages/DepartmentPage.tsx
+ create mode 100755 src/componenets/pages/EmployeeDisplayerPage.tsx
+ create mode 100755 src/componenets/pages/ErrorPage.tsx
+ create mode 100755 src/componenets/pages/HRPageContentSwitcher.tsx
+ create mode 100755 src/componenets/pages/HrDashboardLayout.tsx
+ create mode 100755 src/hooks/useFetchData.js
+ create mode 100755 src/index.css
+ create mode 100755 src/main.jsx
+ create mode 100755 src/utils/formatData.jsx
+ create mode 100755 vite.config.js
+
+SQL> 
+Now we’re ready to create our SQLcl project, and we’re going to call it HrManager.
+
+SQL> project init -name HrManager -schemas DEV_USER -verbose
+Cleaning and validating project name as needed
+The final project name will be "HrManager"
+Created dir:   sqlcl-projects-react-app/.dbtools
+Created dir:   sqlcl-projects-react-app/.dbtools/filters
+Created dir:   sqlcl-projects-react-app/dist
+Created dir:   sqlcl-projects-react-app/src/database
+Created dir:   sqlcl-projects-react-app/src/database/dev_user
+Created file:  sqlcl-projects-react-app/.dbtools/project.sqlformat.xml
+Created file:  sqlcl-projects-react-app/.dbtools/filters/project.filters
+Created file:  sqlcl-projects-react-app/dist/install.sql
+
+------------------------
+PROJECT DETAILS
+------------------------
+Project name:    HrManager 
+Schema(s):       DEV_USER 
+Directory:       /home/assets/assets/workshops/sqlcl-projects-react-app 
+Connection name:  
+Project root:     sqlcl-projects-react-app
+Your project has been successfully created
+SQL> 
+The project command has many sub-commands, including ‘init.’ This sets up the configuration of our project, with the most important being the name of the schema(s) we’re going to be managing with Git.
+
+It also sets up our source (src) directory structure, and creates our distributable (dist) install.sql file.
+
+That looks like this –
+
+──.dbtools
+│   ├── filters
+│   │   └── project.filters
+│   ├── project.config.json
+│   └── project.sqlformat.xml
+├── dist
+│   └── install.sql
+└── src
+    └── database
+Now let’s add and commit what we’ve done so far.
+
+Let’s go create our main branch!
+
+SQL> !git branch
+* main
+
+SQL> !git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .gitignore
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .dbtools/
+        dist/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+SQL> !git add --all
+
+SQL> !git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .dbtools/filters/project.filters
+        new file:   .dbtools/project.config.json
+        new file:   .dbtools/project.sqlformat.xml
+        modified:   .gitignore
+        modified:   README.md
+        new file:   dist/install.sql
+
+
+SQL> !git commit -m "Add project files"
+[main 0099913] Add project files
+ 6 files changed, 204 insertions(+)
+ create mode 100644 .dbtools/filters/project.filters
+ create mode 100644 .dbtools/project.config.json
+ create mode 100644 .dbtools/project.sqlformat.xml
+ create mode 100644 dist/install.sql
+
+SQL> 
+Now we need to create a branch/check-out. We’ll call it SQLcl-Projects-Migration.
+
+SQL> !git checkout -b SQLcl-Projects-Migration
+Switched to a new branch 'SQLcl-Projects-Migration'
+
+SQL> !git branch
+* SQLcl-Projects-Migration
+  main
+
+SQL> !git status
+On branch SQLcl-Projects-Migration
+nothing to commit, working tree clean
+
+SQL> 
+Tip: use SQLcl’s statusbar to see your active project and Git branch at all times
+
+Simply run:
+
+Bash
+SET statusbar ON
+SET statusbar ADD editmode 
+SET statusbar ADD txn
+SET statusbar ADD timing
+SET statusbar ADD project
+SET statusbar ADD git
+Exporting our database objects to our project
+Before we create the .sql files for our table(s), we need to tell SQLcl we don’t want to include the schema names in the source. This allows us to have dev and prod environments where they don’t match.
+
+We’re building in DEV_USER and production lives in PROD_USER, so it wouldn’t do much good to run scripts in the PROD_USER account that refer to DEV_USER.
+
+SQLcl projects have options you can set, and one of these includes the ability to disable the schema bits.
+
+SQL> project config set -name export.setTransform.emitSchema -value false -verbose
+Setting value updated: The value of the setting "export.setTransform.emitSchema" has been successfully updated
+Process completed successfully
+SQL> project config -list -name export.setTransform.emitSchema
+ +========================================+
+ | SETTING NAME                   | VALUE |
+ +========================================+
+ | export.setTransform.emitSchema | false |
+ +----------------------------------------+
+SQL> 
+We’ll see exactly how this works in just a moment.
+
+But before we do that, we also need to tell SQLcl that we want to exclude objects from our project. For example, SQL Developer creates tables in your schema for things like SQL History, and then we have Liquibase tables. We don’t want those controlled by our CI/CD process or Git.
+
+Content of our .dbtools/filters/project.filters file:
+
+not (object_type = 'VIEW'    and object_name ='DATABASECHANGELOG_DETAILS'),
+not (object_type = 'TRIGGER' and object_name ='DATABASECHANGELOG_ACTIONS_TRG'),
+not (object_name like 'DBTOOLS$%'),
+NOW we can do the export 🙂
+
+SQL> project export -verbose
+The current connection (description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.us-ashburn-1.oraclecloud.com))(connect_data=(service_name=ajs6esm7pafcr84_atp144783_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes))) DEV_USER will be used for all operations
+*** TABLES ***
+DEV_USER.EMPLOYEES
+-------------------------------
+TABLE                         1
+-------------------------------
+Exported 1 objects
+Elapsed 19 sec
+SQL> 
+SQLcl is reminding us what database we’re using to do the export, and then it shows us what was covered. We notice that only the EMPLOYEES table is included, and that DBTOOLS$EXECUTION_HISTORY has been left out.
+
+Let’s go look at the resulting file, or at least the first few bytes…
+
+
+Look ma, no DEV_USER schema prefixes!
+Now it’s time to stage
+Before we stage to include our files, let’s see what’s outstanding via another git status –
+
+SQL> !git status
+On branch SQLcl-Projects-Migration
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .dbtools/filters/project.filters
+        modified:   .dbtools/project.config.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        src/database/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+SQL> 
+Now we’ll git add and commit.
+
+SQL> !git add --all
+
+SQL> !git commit -m "Export dev_user schema"
+[SQLcl-Projects-Migration 957bf55] Export dev_user schema
+ 3 files changed, 28 insertions(+), 4 deletions(-)
+ create mode 100644 src/database/dev_user/tables/employees.sql
+
+SQL>
+Now we can stage!
+We’re going to go from having just src files, to also having our dist setup.
+
+SQL> project stage -verbose
+
+Starting execution of stage command using the current branch
+
+Stage is Comparing:
+Old Branch      refs/heads/main
+New Branch      refs/heads/SQLcl-Projects-Migration
+
+Created dir:   dist/releases
+Created dir:   dist/utils
+Created dir:   dist/releases/next
+Created dir:   dist/releases/next/changes
+Created dir:   dist/releases/next/changes/SQLcl-Projects-Migration
+Created dir:   dist/releases/next/changes/SQLcl-Projects-Migration/_custom
+Created change:dist/releases/next/changes/SQLcl-Projects-Migration/stage.changelog.xml
+Created change:dist/releases/main.changelog.xml
+Created change:dist/releases/next/release.changelog.xml
+Created file:  dist/utils/recompile.sql
+Created file:  dist/utils/prechecks.sql
+Created file:  dist/releases/next/changes/SQLcl-Projects-Migration/dev_user/tables/employees.sql
+Updated change:dist/releases/next/changes/SQLcl-Projects-Migration/stage.changelog.xml
+Updated change:dist/releases/next/changes/SQLcl-Projects-Migration/stage.changelog.xml
+Updated change:dist/releases/next/release.changelog.xml
+Updated change:dist/releases/next/release.changelog.xml
+
+Completed executing stage command on branch: SQLcl-Projects-Migration
+
+Stage processesing completed, please review and commit your changes to repository
+
+ Untracked files:
+        dist/releases
+        dist/utils
+        src/assets
+How did this happen? Well by using the database, we can compare the the state of the objects between the two Git branches. We postfix an Liquibase XML formatted changeSet to the src.
+
+First a description of what we just did:
+
+This command generates Liquibase changelogs for all source (src) and custom SQL files by comparing the current branch (SQLcl-Projects-Migration) to the base branch (main). It creates a structured folder (dist/releases/next/) for staged files and allows adding custom changesets with SQL and SQLcl commands.
+
+If we go back and look at our table SQL file in SRC, and scroll to the bottom…
+
+
+SQLcl is maintaining state with a hash, and then is able to figure out what changes to our database object need to be included in a CREATE or ALTER table when it goes to generate the install or upgrade script for dist.
+
+Add and commit our files
+It’s not use to have our files, if Git doesn’t know about them, right?
+
+SQL> !git status
+On branch SQLcl-Projects-Migration
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   dist/releases/main.changelog.xml
+        new file:   dist/releases/next/changes/SQLcl-Projects-Migration/dev_user/tables/employees.sql
+        new file:   dist/releases/next/changes/SQLcl-Projects-Migration/stage.changelog.xml
+        new file:   dist/releases/next/release.changelog.xml
+        new file:   dist/utils/prechecks.sql
+        new file:   dist/utils/recompile.sql
+
+
+SQL> !git commit -m "Add stage files"
+[SQLcl-Projects-Migration 6627067] Add stage files
+ 6 files changed, 354 insertions(+)
+ create mode 100644 dist/releases/main.changelog.xml
+ create mode 100644 dist/releases/next/changes/SQLcl-Projects-Migration/dev_user/tables/employees.sql
+ create mode 100644 dist/releases/next/changes/SQLcl-Projects-Migration/stage.changelog.xml
+ create mode 100644 dist/releases/next/release.changelog.xml
+ create mode 100644 dist/utils/prechecks.sql
+ create mode 100644 dist/utils/recompile.sql
+
+SQL> 
+Our ‘next’ release will have the employees table. And we started from scratch, so it’ll just be the complete CREATE TABLE code for the employees table.
+
+Merging to main
+It’s just me and my local repo, so I’m going to merge directly into the main branch. In the real world you’d have a merge/pull request, and you’d want to include the Jira tickets, unit tests, etc to make it easy for someone to see not only what your code is doing, but that you’ve accounted for all the downstream effects.
+
+SQL> !git checkout main
+Switched to branch 'main'
+
+SQL> !git merge SQLcl-Projects-Migration
+Updating 0099913..6627067
+Fast-forward
+ .dbtools/filters/project.filters                              |   5 +-
+ .dbtools/project.config.json                                  |   2 +-
+ dist/releases/main.changelog.xml                              |   7 +
+ .../SQLcl-Projects-Migration/dev_user/tables/employees.sql    |  26 ++++
+ .../next/changes/SQLcl-Projects-Migration/stage.changelog.xml |   7 +
+ dist/releases/next/release.changelog.xml                      |   8 +
+ dist/utils/prechecks.sql                                      |  81 ++++++++++
+ dist/utils/recompile.sql                                      | 225 +++++++++++++++++++++++++++
+ src/database/dev_user/tables/employees.sql                    |  25 +++
+ 9 files changed, 382 insertions(+), 4 deletions(-)
+ create mode 100644 dist/releases/main.changelog.xml
+ create mode 100644 dist/releases/next/changes/SQLcl-Projects-Migration/dev_user/tables/employees.sql
+ create mode 100644 dist/releases/next/changes/SQLcl-Projects-Migration/stage.changelog.xml
+ create mode 100644 dist/releases/next/release.changelog.xml
+ create mode 100644 dist/utils/prechecks.sql
+ create mode 100644 dist/utils/recompile.sql
+ create mode 100644 src/database/dev_user/tables/employees.sql
+
+SQL> 
+Let’s compare the source vs distributable for our table SQL file(s)
+
+Our source has human readable SQL for diffs, and at the bottom is the liquibase XML formatted changeSet that SQLcl uses to do it’s ‘magic’ for creating what you see on the right.
+
+In our dist we have a SQL formatted Liquibase changeSet. The XML doesn’t play in dist, only src.
+
+It’s finally time to do our 1.0.0 release!
+SQL> project release -version 1.0.0 -verbose
+Creating a release version 1.0.0 for the current body of work
+
+Created dir:   dist/releases/next/changes/main
+Created dir:   dist/releases/next/changes/main/_custom
+Created change:dist/releases/next/changes/main/stage.changelog.xml
+Updated change:dist/releases/main.changelog.xml
+Moved folder "dist/releases/next" to "dist/releases/1.0.0"
+Created file:  dist/releases/next
+Created change:dist/releases/next/release.changelog.xml
+Created change:dist/releases/next/release.changelog.xml
+Process completed successfully
+Ok, we’re no longer doing ‘next,’ now we’re doing 1.0.0, but we will always have a ‘next,’ so we create a new, ‘next.’
+
+Now let’s add and commit.
+
+SQL> !git add .
+
+SQL> !git commit -m "Release 1.0.0"
+[main f036426] Release 1.0.0
+ 7 files changed, 16 insertions(+), 2 deletions(-)
+ rename dist/releases/{next => 1.0.0}/changes/SQLcl-Projects-Migration/dev_user/tables/employees.sql (100%)
+ rename dist/releases/{next => 1.0.0}/changes/SQLcl-Projects-Migration/stage.changelog.xml (100%)
+ create mode 100644 dist/releases/1.0.0/changes/main/stage.changelog.xml
+ create mode 100644 dist/releases/1.0.0/release.changelog.xml
+
+SQL> 
+We’re ready to build our artifact (installer!)
+Well, ALMOST.
+
+We need to make a small tweak to our install.sql file.
+
+Our ‘install’ script wants to do a ‘liquibase update’ – that is, it wants to run our installer. But remember, we’re setting up an existing application for SQLcl projects, and this table already exists in PROD! We’re just trying to establish the ‘baseline’ for Liquibase to start tracking what’s already there.
+
+To do that, we need Liquibase to setup it’s local environment in the database to it can control and monitor changes coming in.
+
+So we’re going to do a one-time change here, to do a ‘liquibase changelog-sync’
+
+
+And of course that means we need to git add and commit, again.
+
+SQL> !git add .
+
+SQL> !git commit -m "updated installer to do a changelog-sync"
+[main 9f6beeb] updated installer to do a changelog-sync
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+SQL> 
+NOW we can generate the artifact.
+
+SQL> project gen-artifact -verbose
+file : /home/assets/assets/workshops/sqlcl-projects-react-app/dist/install.sql
+file : /home/assets/assets/workshops/sqlcl-projects-react-app/dist/releases/main.changelog.xml
+file : /home/assets/assets/workshops/sqlcl-projects-react-app/dist/releases/1.0.0/changes/SQLcl-Projects-Migration/dev_user/tables/employees.sql
+file : /home/assets/assets/workshops/sqlcl-projects-react-app/dist/releases/1.0.0/changes/SQLcl-Projects-Migration/stage.changelog.xml
+file : /home/assets/assets/workshops/sqlcl-projects-react-app/dist/releases/1.0.0/changes/main/stage.changelog.xml
+file : /home/assets/assets/workshops/sqlcl-projects-react-app/dist/releases/1.0.0/release.changelog.xml
+file : /home/assets/assets/workshops/sqlcl-projects-react-app/dist/releases/next/release.changelog.xml
+file : /home/assets/assets/workshops/sqlcl-projects-react-app/dist/utils/prechecks.sql
+file : /home/assets/assets/workshops/sqlcl-projects-react-app/dist/utils/recompile.sql
+file : /home/assets/assets/workshops/sqlcl-projects-react-app/dist/.ipynb_checkpoints/install-checkpoint.sql
+Your artifact has been generated HrManager-1.0.0.zip
+SQL> 
+Hmm, what’s in that Zip?
+
+
+The install script will call the various pieces from the appropriate release.
+
+And now we can run this sucker in prod!
+So let’s connect to the prod environment, and let’s see what we have in the schema.
+
+SQL> connect prod_user/5izf5eB67NxYvbNp
+Connected.
+SQL> tables
+
+TABLES       
+____________ 
+EMPLOYEES    
+
+SQL> 
+And let’s deploy!
+
+SQL> project deploy -file artifact/HrManager-1.0.0.zip  -verbose
+Check database connection...
+Extract the file name: HrManager-1.0.0
+Artifact decompression in progress...
+Artifact decompressed: /tmp/a9320c53-1a63-4ed2-9f31-7b7a87bb375e1434212536776481432
+Starting the migration...
+Installing/updating schemas
+--Starting Liquibase at 2025-05-01T22:02:58.143119496 (version 4.25.0 #4.25.1 built at 2025-01-21 15:25+0000)
+
+Produced logfile: sqlcl-lb-1746136978014.log
+
+Operation completed successfully.
+Migration has been completed
+Removing the decompressed artifact: /tmp/a9320c53-1a63-4ed2-9f31-7b7a87bb375e1434212536776481432...
+SQL> 
+And let’s see what we have in our schema now –
+
+SQL> tables
+
+TABLES                   
+________________________ 
+EMPLOYEES                
+DATABASECHANGELOGLOCK    
+DATABASECHANGELOG        
+
+SQL> select * from databasechangelog;
+
+ID               AUTHOR      FILENAME                                                  DATEEXECUTED                          ORDEREXECUTED EXECTYPE    MD5SUM                                DESCRIPTION    COMMENTS    TAG    LIQUIBASE    CONTEXTS    LABELS    DEPLOYMENT_ID    
+________________ ___________ _________________________________________________________ __________________________________ ________________ ___________ _____________________________________ ______________ ___________ ______ ____________ ___________ _________ ________________ 
+1746134327826    DEV_USER    SQLcl-Projects-Migration/dev_user/tables/employees.sql    01-MAY-25 10.02.59.670499000 PM                   1 EXECUTED    9:5311e6d469370386b72d4e70ded654aa    sql                               4.25.0                             6136979631       
+
+SQL> 
+Our database is now at an expected state, or release, 1.0.0
+We’re now ready to start doing some development work! Adding features, creating new tables, altering columns, deploying REST APIs, etc. The next post will demonstrate how to do this, and then deploy that release.
