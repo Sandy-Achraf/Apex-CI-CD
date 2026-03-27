@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.drive_folder_pkg is
+create or replace package body drive_folder_pkg is
 
     g_bucket varchar2(400);
 
@@ -114,4 +114,4 @@ end drive_folder_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"b15f8139f3b1c6edc62d21cf1d342c6648a2c5ab","type":"PACKAGE_BODY","name":"DRIVE_FOLDER_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"4f15a9c5ce0b69a5f7895b362bc3b2d04730c43f","type":"PACKAGE_BODY","name":"DRIVE_FOLDER_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

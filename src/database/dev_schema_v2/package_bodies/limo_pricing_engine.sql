@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.limo_pricing_engine as
+create or replace package body limo_pricing_engine as
 
     procedure build_results (
         p_session_id       in varchar2,
@@ -190,4 +190,4 @@ end limo_pricing_engine;
 /
 
 
--- sqlcl_snapshot {"hash":"a2e4f924908475d3a113a452d470c8b6bd005d5f","type":"PACKAGE_BODY","name":"LIMO_PRICING_ENGINE","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"b9f32f52e184ea45a60fe88c85fa9dffff6ee1b4","type":"PACKAGE_BODY","name":"LIMO_PRICING_ENGINE","schemaName":"DEV_SCHEMA_V2","sxml":""}

@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.drive_crud is
+create or replace package body drive_crud is
 
     g_bucket varchar2(400);
 
@@ -651,4 +651,4 @@ end drive_crud;
 /
 
 
--- sqlcl_snapshot {"hash":"ed6d8ed5ceab45c1f7da9618c1de10926387e4a8","type":"PACKAGE_BODY","name":"DRIVE_CRUD","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"686a601a7cc13cbc2692eaa554519bdf6723becf","type":"PACKAGE_BODY","name":"DRIVE_CRUD","schemaName":"DEV_SCHEMA_V2","sxml":""}

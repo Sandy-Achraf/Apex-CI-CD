@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.limo_pricing_pkg as
+create or replace package body limo_pricing_pkg as
 
 /* =====================================================
    Get Active KM Price
@@ -251,4 +251,4 @@ end limo_pricing_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"b7eda0d66031d8f2b240cd5f1468527f91ba67ab","type":"PACKAGE_BODY","name":"LIMO_PRICING_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"996ff6505e1abe139c257873f0335b0639dc49ed","type":"PACKAGE_BODY","name":"LIMO_PRICING_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

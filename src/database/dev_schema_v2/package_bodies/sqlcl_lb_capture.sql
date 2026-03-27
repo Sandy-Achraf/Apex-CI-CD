@@ -1,4 +1,4 @@
-create or replace package body dev_schema_v2.sqlcl_lb_capture as
+create or replace package body sqlcl_lb_capture as
 
     function getboolean (
         val in varchar2
@@ -681,4 +681,4 @@ end;
 /
 
 
--- sqlcl_snapshot {"hash":"7848e71fe6e19f61b8f21e698a0c1943b667fb3f","type":"PACKAGE_BODY","name":"SQLCL_LB_CAPTURE","schemaName":"DEV_SCHEMA_V2","sxml":""}
+-- sqlcl_snapshot {"hash":"423624029a123c223c7332c679f23717bd63758e","type":"PACKAGE_BODY","name":"SQLCL_LB_CAPTURE","schemaName":"DEV_SCHEMA_V2","sxml":""}

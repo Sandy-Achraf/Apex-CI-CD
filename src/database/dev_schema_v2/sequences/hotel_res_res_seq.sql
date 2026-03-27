@@ -1,5 +1,5 @@
-create sequence wksp_elwagha50.hotel_res_res_seq minvalue 1 maxvalue 9999999999999999999999999999 increment by 1 /* start with n */ nocache
-noorder nocycle nokeep noscale global;
+create sequence hotel_res_res_seq minvalue 1 maxvalue 9999999999999999999999999999 increment by 1 /* start with n */ cache 20 noorder
+nocycle nokeep noscale global;
 
 
--- sqlcl_snapshot {"hash":"dc6212863feb4ba5191a086a2865e4f8d3d51e8f","type":"SEQUENCE","name":"HOTEL_RES_RES_SEQ","schemaName":"WKSP_ELWAGHA50","sxml":"\n  <SEQUENCE xmlns=\"http://xmlns.oracle.com/ku\" version=\"1.0\">\n   <SCHEMA>WKSP_ELWAGHA50</SCHEMA>\n   <NAME>HOTEL_RES_RES_SEQ</NAME>\n   \n   <INCREMENT>1</INCREMENT>\n   <MINVALUE>1</MINVALUE>\n   <MAXVALUE>9999999999999999999999999999</MAXVALUE>\n   <CACHE>0</CACHE>\n   <SCALE>NOSCALE</SCALE>\n</SEQUENCE>"}
+-- sqlcl_snapshot {"hash":"a80f3bcb39a7b75c79c0eea583b84a2b74f680c0","type":"SEQUENCE","name":"HOTEL_RES_RES_SEQ","schemaName":"DEV_SCHEMA_V2","sxml":"\n  <SEQUENCE xmlns=\"http://xmlns.oracle.com/ku\" version=\"1.0\">\n   <SCHEMA>DEV_SCHEMA_V2</SCHEMA>\n   <NAME>HOTEL_RES_RES_SEQ</NAME>\n   \n   <INCREMENT>1</INCREMENT>\n   <MINVALUE>1</MINVALUE>\n   <MAXVALUE>9999999999999999999999999999</MAXVALUE>\n   <CACHE>20</CACHE>\n   <SCALE>NOSCALE</SCALE>\n</SEQUENCE>"}

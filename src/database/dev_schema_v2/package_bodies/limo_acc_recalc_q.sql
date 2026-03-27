@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.limo_acc_recalc_q as
+create or replace package body limo_acc_recalc_q as
 
     type t_set is
         table of varchar2(30) index by varchar2(30);
@@ -51,4 +51,4 @@ end limo_acc_recalc_q;
 /
 
 
--- sqlcl_snapshot {"hash":"483b11ea8955f2caa291dbedc646cad5c9389375","type":"PACKAGE_BODY","name":"LIMO_ACC_RECALC_Q","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"f1e251e4b4f32f1299a4a9895567437a45fa836c","type":"PACKAGE_BODY","name":"LIMO_ACC_RECALC_Q","schemaName":"DEV_SCHEMA_V2","sxml":""}

@@ -1,4 +1,4 @@
-create or replace package wksp_elwagha50.client_delete_pkg as
+create or replace package client_delete_pkg as
     procedure delete_user (
         p_token      in varchar2,
         p_debug_json out clob
@@ -8,4 +8,4 @@ end client_delete_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"51fa9cd7612cd63d0ed6f112804b3a6f405315df","type":"PACKAGE_SPEC","name":"CLIENT_DELETE_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"b05eaa4c3da1ab817f50911e6cd6d86b27a65563","type":"PACKAGE_SPEC","name":"CLIENT_DELETE_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

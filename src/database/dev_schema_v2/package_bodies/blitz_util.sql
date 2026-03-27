@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.blitz_util as
+create or replace package body blitz_util as
 
     function get_user_email (
         p_app_user in varchar2 default null,
@@ -136,4 +136,4 @@ end blitz_util;
 /
 
 
--- sqlcl_snapshot {"hash":"e69998ecb1dfcaa9faca94bffb2b313927afea10","type":"PACKAGE_BODY","name":"BLITZ_UTIL","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"f47e7458d7f6e051f7687205a2abf3d505539e3e","type":"PACKAGE_BODY","name":"BLITZ_UTIL","schemaName":"DEV_SCHEMA_V2","sxml":""}

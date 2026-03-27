@@ -1,4 +1,4 @@
-create or replace package dev_schema_v2.sqlcl_lb_capture authid current_user is
+create or replace package sqlcl_lb_capture authid current_user is
     function sxmltoddl11 (
         sxml  in clob,
         otype in varchar2
@@ -720,4 +720,4 @@ end;
 /
 
 
--- sqlcl_snapshot {"hash":"b9af201d894e0d32f4153af90daacba447158c7b","type":"PACKAGE_SPEC","name":"SQLCL_LB_CAPTURE","schemaName":"DEV_SCHEMA_V2","sxml":""}
+-- sqlcl_snapshot {"hash":"3da8eff5d7e157caabb941a2acb9962388eef4a7","type":"PACKAGE_SPEC","name":"SQLCL_LB_CAPTURE","schemaName":"DEV_SCHEMA_V2","sxml":""}

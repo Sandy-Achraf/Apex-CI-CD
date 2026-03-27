@@ -1,5 +1,5 @@
-create sequence dev_schema_v2.iseq$$_131072 minvalue 1 maxvalue 9999999999999999999999999999 increment by 1 /* start with n */ cache 20
-noorder nocycle nokeep noscale global;
+create sequence iseq$$_131072 minvalue 1 maxvalue 9999999999999999999999999999 increment by 1 /* start with n */ cache 20 noorder nocycle
+nokeep noscale global;
 
 
--- sqlcl_snapshot {"hash":"88ef02e4bf5f48179d2708e8170440338115c9c4","type":"SEQUENCE","name":"ISEQ$$_131072","schemaName":"DEV_SCHEMA_V2","sxml":"\n  <SEQUENCE xmlns=\"http://xmlns.oracle.com/ku\" version=\"1.0\">\n   <SCHEMA>DEV_SCHEMA_V2</SCHEMA>\n   <NAME>ISEQ$$_131072</NAME>\n   \n   <INCREMENT>1</INCREMENT>\n   <MINVALUE>1</MINVALUE>\n   <MAXVALUE>9999999999999999999999999999</MAXVALUE>\n   <CACHE>20</CACHE>\n   <SCALE>NOSCALE</SCALE>\n</SEQUENCE>"}
+-- sqlcl_snapshot {"hash":"1f3259b055b4d805db4cc725d3bcb9cf45bf3410","type":"SEQUENCE","name":"ISEQ$$_131072","schemaName":"DEV_SCHEMA_V2","sxml":"\n  <SEQUENCE xmlns=\"http://xmlns.oracle.com/ku\" version=\"1.0\">\n   <SCHEMA>DEV_SCHEMA_V2</SCHEMA>\n   <NAME>ISEQ$$_131072</NAME>\n   \n   <INCREMENT>1</INCREMENT>\n   <MINVALUE>1</MINVALUE>\n   <MAXVALUE>9999999999999999999999999999</MAXVALUE>\n   <CACHE>20</CACHE>\n   <SCALE>NOSCALE</SCALE>\n</SEQUENCE>"}

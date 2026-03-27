@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.limo_catalog_pkg as
+create or replace package body limo_catalog_pkg as
 
 /* =====================================================
    PRIVATE HELPERS (ONLY USED INTERNALLY)
@@ -902,4 +902,4 @@ end limo_catalog_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"ca3adf2dfa111183be9a2f80e4381ab078bf8bdd","type":"PACKAGE_BODY","name":"LIMO_CATALOG_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"e8ef77258f564545db8803f82d4c5c5935fc6bea","type":"PACKAGE_BODY","name":"LIMO_CATALOG_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

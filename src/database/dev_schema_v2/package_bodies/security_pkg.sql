@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.security_pkg as
+create or replace package body security_pkg as
 
 --------------------------------------------------------------
 -- Same old hashing logic (unchanged)
@@ -197,4 +197,4 @@ end security_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"eacb5dd1ff7fd098614f00f0d79b68a03cecd4e5","type":"PACKAGE_BODY","name":"SECURITY_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"e340a20305045cc32933e83541748f1856fb8f56","type":"PACKAGE_BODY","name":"SECURITY_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

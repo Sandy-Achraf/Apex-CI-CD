@@ -1,4 +1,4 @@
-create or replace package wksp_elwagha50.reservation_doc_api as
+create or replace package reservation_doc_api as
     procedure update_file_json (
         p_id       in number,
         p_json_id  in varchar2,
@@ -15,4 +15,4 @@ end reservation_doc_api;
 /
 
 
--- sqlcl_snapshot {"hash":"5e9d3fad4e6dfdc27243ae00cbdbc020b6adcdf1","type":"PACKAGE_SPEC","name":"RESERVATION_DOC_API","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"5c0260adf0c337d97491fb22480ec5eb4da880e7","type":"PACKAGE_SPEC","name":"RESERVATION_DOC_API","schemaName":"DEV_SCHEMA_V2","sxml":""}

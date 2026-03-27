@@ -1,5 +1,5 @@
-create sequence wksp_elwagha50.payments_seq minvalue 1 maxvalue 9999999999999999999999999999 increment by 1 /* start with n */ nocache
-noorder nocycle nokeep noscale global;
+create sequence payments_seq minvalue 1 maxvalue 9999999999999999999999999999 increment by 1 /* start with n */ cache 20 noorder nocycle
+nokeep noscale global;
 
 
--- sqlcl_snapshot {"hash":"cb2d9942799bad5a506da11d14b6a404bf6dbfda","type":"SEQUENCE","name":"PAYMENTS_SEQ","schemaName":"WKSP_ELWAGHA50","sxml":"\n  <SEQUENCE xmlns=\"http://xmlns.oracle.com/ku\" version=\"1.0\">\n   <SCHEMA>WKSP_ELWAGHA50</SCHEMA>\n   <NAME>PAYMENTS_SEQ</NAME>\n   \n   <INCREMENT>1</INCREMENT>\n   <MINVALUE>1</MINVALUE>\n   <MAXVALUE>9999999999999999999999999999</MAXVALUE>\n   <CACHE>0</CACHE>\n   <SCALE>NOSCALE</SCALE>\n</SEQUENCE>"}
+-- sqlcl_snapshot {"hash":"e3967a019bbbaab2235f5300f72fc6206b1bb891","type":"SEQUENCE","name":"PAYMENTS_SEQ","schemaName":"DEV_SCHEMA_V2","sxml":"\n  <SEQUENCE xmlns=\"http://xmlns.oracle.com/ku\" version=\"1.0\">\n   <SCHEMA>DEV_SCHEMA_V2</SCHEMA>\n   <NAME>PAYMENTS_SEQ</NAME>\n   \n   <INCREMENT>1</INCREMENT>\n   <MINVALUE>1</MINVALUE>\n   <MAXVALUE>9999999999999999999999999999</MAXVALUE>\n   <CACHE>20</CACHE>\n   <SCALE>NOSCALE</SCALE>\n</SEQUENCE>"}

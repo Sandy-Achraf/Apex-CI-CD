@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.order_router_util as
+create or replace package body order_router_util as
 
   /* =====================================================
      Internal helper: build prepared f?p url
@@ -110,4 +110,4 @@ end order_router_util;
 /
 
 
--- sqlcl_snapshot {"hash":"c1f06d41688c9d0f2f184fc62d4d7db226672aa1","type":"PACKAGE_BODY","name":"ORDER_ROUTER_UTIL","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"7c2b91988b5154c57436b19ba6e8438d472aad58","type":"PACKAGE_BODY","name":"ORDER_ROUTER_UTIL","schemaName":"DEV_SCHEMA_V2","sxml":""}

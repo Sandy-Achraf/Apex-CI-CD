@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.utility_fulfillment as
+create or replace package body utility_fulfillment as
 
   /* ==========================================================
      PROCEDURE: set_item_status
@@ -224,4 +224,4 @@ end utility_fulfillment;
 /
 
 
--- sqlcl_snapshot {"hash":"7492c88ae1e3dfe4a545d011a2754093ac5c79d7","type":"PACKAGE_BODY","name":"UTILITY_FULFILLMENT","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"92fdfb9520293567b5bba8d4812f68d523b8059b","type":"PACKAGE_BODY","name":"UTILITY_FULFILLMENT","schemaName":"DEV_SCHEMA_V2","sxml":""}
