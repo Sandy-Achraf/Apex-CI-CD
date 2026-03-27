@@ -5,7 +5,7 @@
     "autoConnect" : false,
     "version" : "25.4.2.0"
   },
-  "schemas" : [ "DEV_SCHEMA_V2", "WKSP_ELWAGHA50" ],
+  "schemas" : [ "DEV_SCHEMA_V2" ],
   "lastReleaseVersion" : "1.0",
   "export" : {
     "format" : {
@@ -15,7 +15,7 @@
       "collationClause" : "NEVER",
       "constraints" : true,
       "constraintsAsAlter" : true,
-      "emitSchema" : true,
+      "emitSchema" : false,
       "force" : true,
       "partitioning" : false,
       "segmentAttributes" : false,
