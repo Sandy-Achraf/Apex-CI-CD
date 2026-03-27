@@ -42,9 +42,9 @@ jobs:
       - name: Find Artifact
         id: find_artifact
         run: |
-          ARTIFACT=$(ls dist/artifact/*.zip 2>/dev/null | head -n 1)
+          ARTIFACT=$(ls artifact/*.zip 2>/dev/null | head -n 1)
           if [ -z "$ARTIFACT" ]; then
-            echo "No artifact found in dist/artifact/. Run project gen-artifact first."
+            echo "No artifact found in artifact/. Run project gen-artifact first."
             exit 1
           fi
           echo "artifact_path=$ARTIFACT" >> $GITHUB_OUTPUT
