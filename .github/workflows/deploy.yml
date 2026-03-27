@@ -1,0 +1,68 @@
+name: Deploy to PROD on Merge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy DB Changes to PROD
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # ── 1. Checkout the repo ───────────────────────────────────────────────
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # ── 2. Set up Java (SQLcl requires Java 11+) ──────────────────────────
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      # ── 3. Download & Install SQLcl ────────────────────────────────────────
+      - name: Install SQLcl
+        run: |
+          wget -q https://download.oracle.com/otn_software/java/sqldeveloper/sqlcl-latest.zip
+          unzip -q sqlcl-latest.zip -d $HOME/sqlcl
+          chmod +x $HOME/sqlcl/sqlcl/bin/sql
+          echo "$HOME/sqlcl/sqlcl/bin" >> $GITHUB_PATH
+
+      # ── 4. Restore Wallet from GitHub Secret ──────────────────────────────
+      - name: Restore Oracle Wallet
+        run: |
+          mkdir -p $GITHUB_WORKSPACE/wallet
+          echo "${{ secrets.WALLET_BASE64 }}" | base64 --decode > /tmp/wallet.zip
+          unzip -q /tmp/wallet.zip -d $GITHUB_WORKSPACE/wallet
+
+      # ── 5. Find the latest artifact to deploy ────────────────────────────
+      - name: Find Artifact
+        id: find_artifact
+        run: |
+          ARTIFACT=$(ls dist/artifact/*.zip 2>/dev/null | head -n 1)
+          if [ -z "$ARTIFACT" ]; then
+            echo "No artifact found in dist/artifact/. Run project gen-artifact first."
+            exit 1
+          fi
+          echo "artifact_path=$ARTIFACT" >> $GITHUB_OUTPUT
+          echo "Found artifact: $ARTIFACT"
+
+      # ── 6. Deploy to PROD ─────────────────────────────────────────────────
+      - name: Deploy to PROD Database
+        env:
+          TNS_ADMIN: ${{ github.workspace }}/wallet
+          DB_USER: ${{ secrets.PROD_DB_USER }}
+          DB_PASS: ${{ secrets.PROD_DB_PASS }}
+          DB_SERVICE: ${{ secrets.PROD_DB_SERVICE }}
+        run: |
+          sql -s ${DB_USER}/"${DB_PASS}"@${DB_SERVICE} <<EOF
+          project deploy -file ${{ steps.find_artifact.outputs.artifact_path }} -verbose
+          exit
+          EOF
+
+      # ── 7. Notify success ─────────────────────────────────────────────────
+      - name: Deployment Complete
+        run: echo "✅ Deployment to PROD completed successfully!"
