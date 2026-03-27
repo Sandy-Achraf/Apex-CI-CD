@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.all_views_pkg as
+create or replace package body all_views_pkg as
 
     procedure create_driver (
         p_driver_name         in company_drivers.driver_name%type,
@@ -1796,4 +1796,4 @@ end all_views_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"3a27f839e105233fa718e1945fdaa5b08d305d05","type":"PACKAGE_BODY","name":"ALL_VIEWS_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"e101a39359ad3222c99d14acba479c35e53542f4","type":"PACKAGE_BODY","name":"ALL_VIEWS_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

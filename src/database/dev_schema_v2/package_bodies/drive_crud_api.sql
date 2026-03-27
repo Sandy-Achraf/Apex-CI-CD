@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.drive_crud_api is
+create or replace package body drive_crud_api is
 
     g_bucket            varchar2(400);
       -- Cache للأسماء وملفات الـ BLOB
@@ -599,4 +599,4 @@ end drive_crud_api;
 /
 
 
--- sqlcl_snapshot {"hash":"91e19fade25b2f6ba9530ef770dc2cf1b20c1144","type":"PACKAGE_BODY","name":"DRIVE_CRUD_API","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"e825ab6463c1ebc0b5f7597b1c12fe5b1458eb4c","type":"PACKAGE_BODY","name":"DRIVE_CRUD_API","schemaName":"DEV_SCHEMA_V2","sxml":""}

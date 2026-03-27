@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.car_api as
+create or replace package body car_api as
 
     procedure create_car_zip (
         p_car_id in varchar2
@@ -89,4 +89,4 @@ end car_api;
 /
 
 
--- sqlcl_snapshot {"hash":"38629f9e7c76954175c66afa23d817221624e654","type":"PACKAGE_BODY","name":"CAR_API","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"890dad05e4a3f9e6d22fd5892599f2fce7f0cfe4","type":"PACKAGE_BODY","name":"CAR_API","schemaName":"DEV_SCHEMA_V2","sxml":""}

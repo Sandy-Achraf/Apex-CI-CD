@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.utility_invoice_payments as
+create or replace package body utility_invoice_payments as
 
   /* =====================================================
      ID generator
@@ -314,4 +314,4 @@ end utility_invoice_payments;
 /
 
 
--- sqlcl_snapshot {"hash":"b8d9419b6b112d63f40717230fcde2a31d1ec214","type":"PACKAGE_BODY","name":"UTILITY_INVOICE_PAYMENTS","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"217c6fa78b121351f75fd8a2157f6e165bb96505","type":"PACKAGE_BODY","name":"UTILITY_INVOICE_PAYMENTS","schemaName":"DEV_SCHEMA_V2","sxml":""}

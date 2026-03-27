@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.media_pkg as
+create or replace package body media_pkg as
 
 /* =====================================================
    Upload file from APEX temp → OCI → PAR URL
@@ -113,4 +113,4 @@ end media_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"daedc228e75e7503bded72f052602fe105483a44","type":"PACKAGE_BODY","name":"MEDIA_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"1316c8be4cc0d69b6f2f9004d1975fb74fe86af7","type":"PACKAGE_BODY","name":"MEDIA_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

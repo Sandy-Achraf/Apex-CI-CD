@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.whatsapp_pkg as
+create or replace package body whatsapp_pkg as
 
   ------------------------------------------------------------------
   -- Credentials (from your .env)
@@ -185,4 +185,4 @@ end whatsapp_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"cdff93f6e3f3d15b42d06045559a42bab98dc6fb","type":"PACKAGE_BODY","name":"WHATSAPP_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"6bd01cf3d95a01a4d94a1d0c4bd7c4cfda987588","type":"PACKAGE_BODY","name":"WHATSAPP_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

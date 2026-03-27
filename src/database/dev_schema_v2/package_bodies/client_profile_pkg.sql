@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.client_profile_pkg as
+create or replace package body client_profile_pkg as
 
     procedure update_profile (
         p_token           in varchar2,
@@ -283,4 +283,4 @@ end client_profile_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"4a3b131351a36f4dc13153b38ec75bf0d23b1083","type":"PACKAGE_BODY","name":"CLIENT_PROFILE_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"96b4c0e12f723bd0155e22a3a51cc55bf04d887b","type":"PACKAGE_BODY","name":"CLIENT_PROFILE_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

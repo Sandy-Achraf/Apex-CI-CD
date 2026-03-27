@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.photo_util is
+create or replace package body photo_util is
 
     procedure manage_record (
         p_action      in varchar2,
@@ -205,4 +205,4 @@ end photo_util;
 /
 
 
--- sqlcl_snapshot {"hash":"97b94c21fca98d3cb1bd7432656e5263131b412a","type":"PACKAGE_BODY","name":"PHOTO_UTIL","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"6f1b1dd75195c328d6de11174c840fd914e441ec","type":"PACKAGE_BODY","name":"PHOTO_UTIL","schemaName":"DEV_SCHEMA_V2","sxml":""}

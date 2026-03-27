@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.clients_auth_pkg as
+create or replace package body clients_auth_pkg as
 
     g_salt       constant varchar2(50) := 'ELWAGHA_2025!';
     g_jwt_secret constant varchar2(200) := 'CHANGE_ME_TO_A_STRONG_SECRET_256BIT';
@@ -813,4 +813,4 @@ end clients_auth_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"693693ab7a437b8ccb941e0da089a7a7b2d2b343","type":"PACKAGE_BODY","name":"CLIENTS_AUTH_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"f1de8c793c4cf68247342b847d9acfd49084d4bf","type":"PACKAGE_BODY","name":"CLIENTS_AUTH_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

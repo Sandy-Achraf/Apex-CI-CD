@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.reservation_log as
+create or replace package body reservation_log as
 
     procedure log_interaction (
         p_reservation_id in varchar2,
@@ -80,4 +80,4 @@ end reservation_log;
 /
 
 
--- sqlcl_snapshot {"hash":"e37f1cfbc8ab514339e7e73cbb4d9cc7cfb2aea7","type":"PACKAGE_BODY","name":"RESERVATION_LOG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"bd2f79267caf8a2f71ab9fab74251ac8e6de9e04","type":"PACKAGE_BODY","name":"RESERVATION_LOG","schemaName":"DEV_SCHEMA_V2","sxml":""}

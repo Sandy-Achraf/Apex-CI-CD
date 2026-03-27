@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.iam_admin_pkg as
+create or replace package body iam_admin_pkg as
 
 ----------------------------------------------------------
 -- CREATE IDENTITY
@@ -533,4 +533,4 @@ end iam_admin_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"36f74f3d159a0062f59a124e7effbbd4874d611e","type":"PACKAGE_BODY","name":"IAM_ADMIN_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"00c262bcfee4e4ae9b98154b99003b0214a2a114","type":"PACKAGE_BODY","name":"IAM_ADMIN_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

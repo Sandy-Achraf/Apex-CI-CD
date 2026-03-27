@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.limo_trip_pkg as
+create or replace package body limo_trip_pkg as
 
     procedure start_trip (
         p_product_id    in varchar2,  -- still PRODUCT_ID from UI
@@ -110,4 +110,4 @@ end limo_trip_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"8bbed59e3c4be42461d62195199b3d77f1e3d63b","type":"PACKAGE_BODY","name":"LIMO_TRIP_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"3b51cc3240ce6387f525bfd12b50574446ab2925","type":"PACKAGE_BODY","name":"LIMO_TRIP_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

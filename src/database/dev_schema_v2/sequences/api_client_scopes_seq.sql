@@ -1,5 +1,5 @@
-create sequence wksp_elwagha50.api_client_scopes_seq minvalue 1 maxvalue 9999999999999999999999999999 increment by 1 /* start with n */
-cache 20 noorder nocycle nokeep noscale global;
+create sequence api_client_scopes_seq minvalue 1 maxvalue 9999999999999999999999999999 increment by 1 /* start with n */ cache 20 noorder
+nocycle nokeep noscale global;
 
 
--- sqlcl_snapshot {"hash":"a58544d2743df05c3a89955bbefbe4dc3bc7ce80","type":"SEQUENCE","name":"API_CLIENT_SCOPES_SEQ","schemaName":"WKSP_ELWAGHA50","sxml":"\n  <SEQUENCE xmlns=\"http://xmlns.oracle.com/ku\" version=\"1.0\">\n   <SCHEMA>WKSP_ELWAGHA50</SCHEMA>\n   <NAME>API_CLIENT_SCOPES_SEQ</NAME>\n   \n   <INCREMENT>1</INCREMENT>\n   <MINVALUE>1</MINVALUE>\n   <MAXVALUE>9999999999999999999999999999</MAXVALUE>\n   <CACHE>20</CACHE>\n   <SCALE>NOSCALE</SCALE>\n</SEQUENCE>"}
+-- sqlcl_snapshot {"hash":"90af323cdeaea5517fb8fc7f25cebb8066bc3b89","type":"SEQUENCE","name":"API_CLIENT_SCOPES_SEQ","schemaName":"DEV_SCHEMA_V2","sxml":"\n  <SEQUENCE xmlns=\"http://xmlns.oracle.com/ku\" version=\"1.0\">\n   <SCHEMA>DEV_SCHEMA_V2</SCHEMA>\n   <NAME>API_CLIENT_SCOPES_SEQ</NAME>\n   \n   <INCREMENT>1</INCREMENT>\n   <MINVALUE>1</MINVALUE>\n   <MAXVALUE>9999999999999999999999999999</MAXVALUE>\n   <CACHE>20</CACHE>\n   <SCALE>NOSCALE</SCALE>\n</SEQUENCE>"}

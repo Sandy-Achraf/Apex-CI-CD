@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.utility_invoice as
+create or replace package body utility_invoice as
 
     g_vat_rate constant number := 0.14;
 
@@ -317,4 +317,4 @@ end utility_invoice;
 /
 
 
--- sqlcl_snapshot {"hash":"4ce275d93fed7a48a2d3f15815210ac964a7b5e4","type":"PACKAGE_BODY","name":"UTILITY_INVOICE","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"79c69c47ada3022ecb949b14938005b48178c808","type":"PACKAGE_BODY","name":"UTILITY_INVOICE","schemaName":"DEV_SCHEMA_V2","sxml":""}

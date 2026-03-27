@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.ops_sync_pkg as
+create or replace package body ops_sync_pkg as
 
 /* =====================================================
    Log error
@@ -430,4 +430,4 @@ end ops_sync_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"1ae969b7fa4069caec6977ddc67f48ea9c77ef77","type":"PACKAGE_BODY","name":"OPS_SYNC_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"907b6e59dbfe8d7f79c283c01c8b06bba955bc37","type":"PACKAGE_BODY","name":"OPS_SYNC_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

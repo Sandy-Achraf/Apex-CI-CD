@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.limo_driver_settlement_pkg as
+create or replace package body limo_driver_settlement_pkg as
 
     procedure create_driver_settlement (
         p_driver_id     in varchar2,
@@ -207,4 +207,4 @@ end limo_driver_settlement_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"4e0e97776e64fc114040336fe0017a5daade02a3","type":"PACKAGE_BODY","name":"LIMO_DRIVER_SETTLEMENT_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"4f49a08146d29d02f1c4118cce1ceaf5c3596025","type":"PACKAGE_BODY","name":"LIMO_DRIVER_SETTLEMENT_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

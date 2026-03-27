@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.car_catalog_router_pkg as
+create or replace package body car_catalog_router_pkg as
 
 /* =====================================================
    EDIT (Dialog Page 352)
@@ -60,4 +60,4 @@ end car_catalog_router_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"1e4d5ea678b02c60d6912e8900f395c013cad032","type":"PACKAGE_BODY","name":"CAR_CATALOG_ROUTER_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"de2313266b79eae3d1575f724350736d50f114e6","type":"PACKAGE_BODY","name":"CAR_CATALOG_ROUTER_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.order_mgmt_pkg as
+create or replace package body order_mgmt_pkg as
 
     function is_open_order_status (
         p_status in varchar2
@@ -690,4 +690,4 @@ end order_mgmt_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"f30e6bdc1c7d5657dd6efbe998f43ab048645f69","type":"PACKAGE_BODY","name":"ORDER_MGMT_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"201a6578d41e6834501fa6aab0b9c711cc7c4fed","type":"PACKAGE_BODY","name":"ORDER_MGMT_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

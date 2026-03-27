@@ -1,5 +1,5 @@
-create sequence wksp_elwagha50.seq_limo_trip_expense minvalue 1 maxvalue 9999999999999999999999999999 increment by 1 /* start with n */
-nocache noorder nocycle nokeep noscale global;
+create sequence seq_limo_trip_expense minvalue 1 maxvalue 9999999999999999999999999999 increment by 1 /* start with n */ cache 20 noorder
+nocycle nokeep noscale global;
 
 
--- sqlcl_snapshot {"hash":"d1fe786bce201fdcc71a47f9fc479ecb89f036ad","type":"SEQUENCE","name":"SEQ_LIMO_TRIP_EXPENSE","schemaName":"WKSP_ELWAGHA50","sxml":"\n  <SEQUENCE xmlns=\"http://xmlns.oracle.com/ku\" version=\"1.0\">\n   <SCHEMA>WKSP_ELWAGHA50</SCHEMA>\n   <NAME>SEQ_LIMO_TRIP_EXPENSE</NAME>\n   \n   <INCREMENT>1</INCREMENT>\n   <MINVALUE>1</MINVALUE>\n   <MAXVALUE>9999999999999999999999999999</MAXVALUE>\n   <CACHE>0</CACHE>\n   <SCALE>NOSCALE</SCALE>\n</SEQUENCE>"}
+-- sqlcl_snapshot {"hash":"07c4378678137e5eb6386d07abaf66a68b7a5c9f","type":"SEQUENCE","name":"SEQ_LIMO_TRIP_EXPENSE","schemaName":"DEV_SCHEMA_V2","sxml":"\n  <SEQUENCE xmlns=\"http://xmlns.oracle.com/ku\" version=\"1.0\">\n   <SCHEMA>DEV_SCHEMA_V2</SCHEMA>\n   <NAME>SEQ_LIMO_TRIP_EXPENSE</NAME>\n   \n   <INCREMENT>1</INCREMENT>\n   <MINVALUE>1</MINVALUE>\n   <MAXVALUE>9999999999999999999999999999</MAXVALUE>\n   <CACHE>20</CACHE>\n   <SCALE>NOSCALE</SCALE>\n</SEQUENCE>"}

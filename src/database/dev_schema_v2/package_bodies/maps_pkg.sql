@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.maps_pkg as
+create or replace package body maps_pkg as
 
   -- خلي الـ key في Application Setting / Table / Vault (مش هاردهاردكود)
   -- هنا مثال: Application Setting اسمها GOOGLE_ROUTES_KEY
@@ -119,4 +119,4 @@ end maps_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"d12fe758b6dc452bbf48f26dbd759bc423b8af5d","type":"PACKAGE_BODY","name":"MAPS_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"487cb26f4654683f3b54d499e0807a849499fb14","type":"PACKAGE_BODY","name":"MAPS_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}

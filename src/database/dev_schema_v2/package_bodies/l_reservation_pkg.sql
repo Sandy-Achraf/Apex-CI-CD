@@ -1,4 +1,4 @@
-create or replace package body wksp_elwagha50.l_reservation_pkg as
+create or replace package body l_reservation_pkg as
 
   /* ================================
      helpers
@@ -880,4 +880,4 @@ end l_reservation_pkg;
 /
 
 
--- sqlcl_snapshot {"hash":"54cedd6f9fd689eb2b5c5e0868ca6831d8dbfcca","type":"PACKAGE_BODY","name":"L_RESERVATION_PKG","schemaName":"WKSP_ELWAGHA50","sxml":""}
+-- sqlcl_snapshot {"hash":"2dd9c0569135cddfccc84a79b7a23afb2336321d","type":"PACKAGE_BODY","name":"L_RESERVATION_PKG","schemaName":"DEV_SCHEMA_V2","sxml":""}
