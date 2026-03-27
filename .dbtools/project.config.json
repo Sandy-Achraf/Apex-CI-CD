@@ -1,7 +1,7 @@
 {
   "project" : "ApexCICD",
   "sqlcl" : {
-    "connectionName" : "",
+    "connectionName" : "armadadev_tp",
     "autoConnect" : false,
     "version" : "25.4.2.0"
   },
