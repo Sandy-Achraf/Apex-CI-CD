@@ -37,6 +37,9 @@ jobs:
           mkdir -p $GITHUB_WORKSPACE/wallet
           echo "${{ secrets.WALLET_BASE64 }}" | base64 --decode > /tmp/wallet.zip
           unzip -q /tmp/wallet.zip -d $GITHUB_WORKSPACE/wallet
+          # Fix sqlnet.ora: overwrite Windows path with correct Linux path
+          echo "WALLET_LOCATION = (SOURCE = (METHOD = file) (METHOD_DATA = (DIRECTORY=\"$GITHUB_WORKSPACE/wallet\")))" > $GITHUB_WORKSPACE/wallet/sqlnet.ora
+          echo "SSL_SERVER_DN_MATCH=yes" >> $GITHUB_WORKSPACE/wallet/sqlnet.ora
 
       # ── 5. Find the latest artifact to deploy ────────────────────────────
       - name: Find Artifact
@@ -58,7 +61,8 @@ jobs:
           DB_PASS: ${{ secrets.PROD_DB_PASS }}
           DB_SERVICE: ${{ secrets.PROD_DB_SERVICE }}
         run: |
-          sql -s ${DB_USER}/"${DB_PASS}"@${DB_SERVICE} <<EOF
+          sql /nolog <<EOF
+          connect ${DB_USER}/"${DB_PASS}"@${DB_SERVICE}
           project deploy -file ${{ steps.find_artifact.outputs.artifact_path }} -verbose
           exit
           EOF
