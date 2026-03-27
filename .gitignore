@@ -1,10 +1,5 @@
-﻿# Oracle Wallet - NEVER push these to GitHub
-Wallet_ArmadaDev/*.p12
-Wallet_ArmadaDev/*.sso
-Wallet_ArmadaDev/*.jks
-Wallet_ArmadaDev/*.pem
-Wallet_ArmadaDev/ewallet*
-Wallet_ArmadaDev/cwallet*
+﻿# Oracle Wallet - SECURITY SENSITIVE - Never push to GitHub
+Wallet_ArmadaDev/
 
 # Logs
 *.log
