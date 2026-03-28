@@ -1,5 +1,5 @@
 -- liquibase formatted sql
--- changeset WKSP_ELWAGHA50:1774729892368 stripComments:false  logicalFilePath:ords/wksp_elwagha50/ords.sql
+-- changeset WKSP_ELWAGHA50:1774653503534 stripComments:false  logicalFilePath:ords/wksp_elwagha50/ords.sql
 -- sqlcl_snapshot {"hash":"3913e5ee531f073e2bc1515a7320bac0ac860f82","type":"ORDS_SCHEMA","name":"ords","schemaName":"WKSP_ELWAGHA50","sxml":""}
 --
         
