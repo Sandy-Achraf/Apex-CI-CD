@@ -6,7 +6,7 @@
     "version" : "25.4.2.0"
   },
   "schemas" : [ "DEV_SCHEMA_V2" ],
-  "lastReleaseVersion" : "1.0.0",
+  "lastReleaseVersion" : "1.0.2",
   "export" : {
     "format" : {
       "enable" : true
